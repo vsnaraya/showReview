@@ -1,0 +1,78 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color:white;
+}
+
+#landing-header{
+    z-index: 1;
+    position:relative;
+    padding-top: 40vh;
+    text-align:center;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://static1.squarespace.com/static/53a1ed28e4b0365dad79a21a/t/543371b2e4b08690c01ac423/1412657588907/Screen+shot+2014-10-06+at+9.52.34+PM.png); 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://2.bp.blogspot.com/-AhXrXb0Y4ag/VPFhNkECpzI/AAAAAAAADzU/Wo--yKSsxIg/s1600/142411%2BNew%2BStylish%2BColorful%2BShoes%2BHD%2BWallpaperz%2B189289.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://i.pinimg.com/originals/e9/bd/8b/e9bd8b762d5925a4e1c3084a477d60c3.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://images.solecollector.com/complex/image/upload/nrghivnvvmcrnicngckd.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://images.hdbackgroundpictures.com/pictureHD51ba8fc57e01b31063.jpg);
+  animation-delay: 40s; 
+}
+
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
