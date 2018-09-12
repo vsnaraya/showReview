@@ -12,7 +12,9 @@ var  User = require("./models/users");
 var  LocalStrategy = require("passport-local");
 var flash = require("connect-flash");
 
-mongoose.connect("mongodb://localhost:27017/shoe_review", {useNewUrlParser: true });
+//mongoose.connect("mongodb://localhost:27017/shoe_review", {useNewUrlParser: true });
+mongoose.connect("mongodb://vinay:vballer18sc4@ds151602.mlab.com:51602/shoereview");
+
 app.use(bodyparser.urlencoded({ extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
