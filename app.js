@@ -12,8 +12,8 @@ var  User = require("./models/users");
 var  LocalStrategy = require("passport-local");
 var flash = require("connect-flash");
 
-//mongoose.connect("mongodb://localhost:27017/shoe_review", {useNewUrlParser: true });
-mongoose.connect("mongodb://vinay:vballer18sc4@ds151602.mlab.com:51602/shoereview");
+mongoose.connect("mongodb://localhost:27017/shoe_review", {useNewUrlParser: true });
+//mongoose.connect("mongodb://vinay:vballer18sc4@ds151602.mlab.com:51602/shoereview");
 
 app.use(bodyparser.urlencoded({ extended:true}));
 app.set("view engine", "ejs");
@@ -38,7 +38,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 app.use( function(req, res, next) {
-    res.locals.currentUser = req.user;
+    res.locals.currentUser = req.user;c
    //console.log(req.user);
     res.locals.error = req.flash("error");
     res.locals.success = req.flash("success");
