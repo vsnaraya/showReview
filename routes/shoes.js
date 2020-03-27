@@ -32,8 +32,8 @@ router.post("/shoes", function(req, res){
         username: req.user.username
     };
    //create new campground
-   var NewCampground = {name: name, image: image, description:description, author:author};
-   Shoe.create(NewCampground, function(err, newlyCreated){
+   var NewShoe = {name: name, image: image, description:description, author:author};
+   Shoe.create(NewShoe, function(err, newlyCreated){
         if(err){
             console.log(err);
         }else{
@@ -49,7 +49,6 @@ router.get("/shoes/:id", function(req, res){
        if(err){
            console.log(err);
        } else{
-            //console.log(foundCampground+ "is");
             res.render("shoes/show", {shoe:foundShoe});
        }
     });
