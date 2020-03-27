@@ -23,7 +23,7 @@ app.use(flash());
 
 
 app.use(require("express-session")({
-    secret: " I am a real one",
+    secret: "secret",
     resave: false,
     saveUninitialized: false
 }));
